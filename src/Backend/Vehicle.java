@@ -8,7 +8,7 @@ public class Vehicle {
    private String licenseplate,colour,VehicleType;
    private int registrationNum;
    private Customer Owner;
-   private Device_status stat = Device_status.UNINSTALLED;
+   private DeviceStatus stat = DeviceStatus.UNINSTALLED;
    private ArrayList<TrackingDevice> device = new ArrayList<TrackingDevice>();
 
 
@@ -73,7 +73,7 @@ public class Vehicle {
     public String installdevice (TrackingDevice t){
         if (device.size() == 0){
             device.set(0, t);
-            stat = Device_status.INSTALLED;
+            stat = DeviceStatus.INSTALLED;
             return "Device Installed";
         }
         return "Device Already Installed";
@@ -82,7 +82,7 @@ public class Vehicle {
     public String Uninstalldevice(){
         if(device.size() != 0){
             device.remove(0);
-            stat = Device_status.UNINSTALLED;
+            stat = DeviceStatus.UNINSTALLED;
             return "Device Installed";
         }
         return "Device Already Installed";
