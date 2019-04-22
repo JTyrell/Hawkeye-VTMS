@@ -1,5 +1,5 @@
 package Backend;
 
-public enum Device_status {
+public enum DeviceStatus {
  INSTALLED , UNINSTALLED
 }
