@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author God, Giselle Todd, Jodiann Deer, Tai-Vaughn White, Rogerio Jones, Jevoun Tyrell.
+ * @author God, Giselle Todd, Jodianne Deer, Tai-Vaughn White, Rogerio Jones, Jevoun Tyrell.
  */
 public class Login extends javax.swing.JFrame {
    /*  String[] info= {"jodi@gmail.com", "shemar@gmail.com","rogero@gmail.com", "giselle@gmail.com","abigail@gmail.com"};*/
