@@ -1,4 +1,5 @@
 package Backend;
+import GUI.*;
 
 import java.util.ArrayList;
 
@@ -6,14 +7,14 @@ public class Customer {
     private String Lname;
     private String Fname;
     private int BankAccountNum;
-    private ArrayList<Vehicle> V_array;
+    private ArrayList<Vehicle> V_array = new ArrayList<Vehicle>();
+    private ArrayList<Customer> Cust_array = new ArrayList<Customer>();
 
 
     public Customer(String Fname, String Lname, int BankAccountNum){
         this.Lname = Lname;
         this.Fname = Fname;
-        this.BankAccountNum = BankAccountNum;
-        V_array = new ArrayList<Vehicle>();
+        this.BankAccountNum = BankAccountNum;        
     }
 
 
@@ -56,7 +57,19 @@ public class Customer {
     public void addVehicle(Vehicle v){
         this.V_array.add(v);
     }
+    
+    public void addCustomer(Customer c){
+        this.Cust_array.add(c);
+    }
 
+    public Customer findCustomer(int BankAccountNum){
+        for (Customer cu : Cust_array){
+            if(cu.getBankAccountNum() != 0 && cu.getBankAccountNum() == BankAccountNum) {
+                return cu;
+            }
+        }
+        return null;
+    }
 
     public Vehicle findVehicle(String plateNum){
         for (Vehicle b : V_array){
